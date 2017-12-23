@@ -21,24 +21,9 @@ public class ReactiveSlackApplicationTests {
 	@Autowired
 	private SlackSocketEventHandler eventHandler;
 
-	private ObjectMapper objectMapper = new ObjectMapper();
-
 	@Test
 	public void contextLoads() {
 		assertNotNull(eventHandler);
-	}
-
-	@Test
-	public void sendMessage() throws Exception {
-		Map<String, Object> payload = new HashMap<>();
-		payload.put("id", 1);
-		payload.put("channel", "C0VPRF1HU");
-		payload.put("type", "message");
-		payload.put("text", "hello from JUnit");
-
-		String payloadStr = objectMapper.writeValueAsString(payload);
-
-		eventHandler.sendMessage(payloadStr);
 	}
 
 }
