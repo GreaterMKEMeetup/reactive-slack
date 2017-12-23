@@ -1,6 +1,6 @@
 package org.gmjm.slack.reactive;
 
-import org.springframework.util.concurrent.ListenableFuture;
+import  org.springframework.util.concurrent.ListenableFuture;
 import org.springframework.web.socket.WebSocketHandler;
 import org.springframework.web.socket.WebSocketHttpHeaders;
 import org.springframework.web.socket.WebSocketSession;
@@ -10,8 +10,12 @@ import org.springframework.web.socket.client.WebSocketConnectionManager;
 import java.util.concurrent.TimeUnit;
 
 /**
+ * <p>
  * Default implementation doesn't wait until socket session is established, so this implementation overrides
- * waits for a
+ * waits for a session for {@code timeout} seconds.
+ * </p>
+ *
+ * {@code timeout} waits 10 seconds by default.
  */
 public class SyncWebSocketConnectionManager extends WebSocketConnectionManager {
 
