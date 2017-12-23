@@ -1,7 +1,6 @@
 package org.gmjm.slack.reactive;
 
 import lombok.extern.apachecommons.CommonsLog;
-import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketMessage;
 import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.AbstractWebSocketHandler;
